@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta name="HandheldFriendly" content="true" />
     <title>Exclusive Wealth Symposium | Singapore</title>
     <meta
@@ -551,7 +554,7 @@
           min-width: 60px;
           padding: 0.8rem;
         }
-        
+
         .calendar-btn {
           white-space: normal;
           padding: 8px 12px;
@@ -564,7 +567,7 @@
           height: auto;
           min-height: 100vh;
         }
-        
+
         .hero-content {
           padding: 2rem 0;
         }
@@ -575,7 +578,7 @@
   <body>
     <!-- Hero Section -->
     <section class="hero-section">
-      <video id="heroVideo" autoplay muted loop playsinline class="hero-video">
+      <video id="heroVideo" autoplay loop playsinline class="hero-video">
         <source src="hero-video.mp4" type="video/mp4" />
         <source src="hero-video.webm" type="video/webm" />
         Your browser does not support the video tag.
@@ -757,30 +760,11 @@
         </p>
         <p>
           <strong><i class="fas fa-clock"></i> Time:</strong> 6:30 PM - 9:30 PM
-  
         </p>
         <p>
           <strong><i class="fas fa-map-marker-alt"></i> Venue:</strong> The
           Labrador Tower Level 6 (Near Labrador Park MRT)
         </p>
-        
-      </div>
-
-      <div class="calendar-buttons">
-        <a
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Exclusive+Wealth+Symposium&dates=20250730T103000Z/20250730T133000Z&details=Join+us+for+an+exclusive+evening+of+wealth+strategy+and+high-level+networking+at+The+Fullerton+Bay+Hotel&location=The+Fullerton+Bay+Hotel"
-          target="_blank"
-          class="calendar-btn"
-        >
-          <i class="fab fa-google"></i> Google Calendar
-        </a>
-        <a
-          href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Exclusive Wealth Symposium%0ADTSTART;TZID=Asia/Singapore:20250730T183000%0ADTEND;TZID=Asia/Singapore:20250730T213000%0ADESCRIPTION:Join us for an exclusive evening of wealth strategy and high-level networking at The Fullerton Bay Hotel%0ALOCATION:The Fullerton Bay Hotel%0AEND:VEVENT%0AEND:VCALENDAR"
-          download="wealth-symposium.ics"
-          class="calendar-btn"
-        >
-          <i class="fas fa-calendar-alt"></i> Outlook Calendar
-        </a>
       </div>
     </section>
 
@@ -897,7 +881,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="company_logo.png" alt="Wealth Symposium" class="footer-logo" loading="lazy" />
+      <img
+        src="company_logo.png"
+        alt="Wealth Symposium"
+        class="footer-logo"
+        loading="lazy"
+      />
 
       <div class="footer-contact">
         <p>
@@ -975,32 +964,36 @@
     <!-- Countdown Script -->
     <script>
       const video = document.getElementById("heroVideo");
-      
+
       // Video play promise with fallback
       function playVideo() {
         const promise = video.play();
-        
+
         if (promise !== undefined) {
-          promise.catch(error => {
+          promise.catch((error) => {
             // Autoplay was prevented, mute and try again
             video.muted = true;
             video.play();
           });
         }
       }
-      
+
       // Play video when page loads
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         video.muted = true; // Start muted to ensure autoplay works
         playVideo();
       });
-      
+
       // Try to unmute when user interacts
-      document.addEventListener('click', function() {
-        if (video.muted) {
-          video.muted = false;
-        }
-      }, { once: true });
+      document.addEventListener(
+        "click",
+        function () {
+          if (video.muted) {
+            video.muted = false;
+          }
+        },
+        { once: true }
+      );
 
       const eventDate = new Date("July 30, 2025 18:30:00").getTime();
 
@@ -1015,10 +1008,18 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-        document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-        document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-        document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        document.getElementById("days").innerHTML = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").innerHTML = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").innerHTML = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").innerHTML = seconds
+          .toString()
+          .padStart(2, "0");
       }
 
       updateCountdown();

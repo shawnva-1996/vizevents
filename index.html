@@ -541,13 +541,37 @@
           padding: 2rem 1.5rem;
         }
       }
+
+      @media (max-width: 480px) {
+        .countdown-container {
+          gap: 1rem;
+          padding: 0 1rem;
+        }
+
+        .countdown-box {
+          flex: 1 1 45%;
+          max-width: 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .form-input,
+        .submit-btn {
+          font-size: 0.95rem;
+          padding: 10px 14px;
+        }
+
+        .form-label {
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
 
   <body>
     <!-- Hero Section -->
     <section class="hero-section">
-      <video id="heroVideo" autoplay loop class="hero-video">
+      <video id="heroVideo" autoplay loop muted playsinline class="hero-video">
         <source src="hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -1026,6 +1050,12 @@
         },
         false
       );
+      window.addEventListener("DOMContentLoaded", function () {
+        const heroVideo = document.getElementById("heroVideo");
+        if (heroVideo && heroVideo.paused) {
+          heroVideo.play().catch((e) => console.warn("Autoplay failed:", e));
+        }
+      });
     </script>
   </body>
 </html>

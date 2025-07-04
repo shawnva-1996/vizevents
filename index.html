@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive Wealth Symposium | Singapore</title>
+    <meta name="description" content="An invitation-only evening of high-level networking and wealth strategy for Singapore's most discerning professionals.">
+
+    <!-- Font & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="company_logo.png" />
+
+    <!-- CSS Styles -->
+    <style>
+      :root {
+        --primary: #1a2a3a; /* Deep navy */
+        --secondary: #d4af37; /* Gold */
+        --accent: #8b0000; /* Deep red */
+        --light: #f8f8f8;
+        --dark: #121212;
+        --text: #333333;
+        --text-light: #777777;
+      }
+      
+      body {
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        background-color: var(--light);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        font-weight: 700;
+      }
+      
+      h1 {
+        font-size: 2.8rem;
+        margin: 1.5rem auto;
+        text-align: center;
+        line-height: 1.2;
+      }
+      
+      h2 {
+        font-size: 2rem;
+        margin: 1.5rem auto;
+        position: relative;
+        display: inline-block;
+      }
+      
+      h2:after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background: var(--secondary);
+        bottom: -10px;
+        left: 25%;
+      }
+      
+      .hero-section {
+        position: relative;
+        height: 80vh;
+        min-height: 600px;
+        overflow: hidden;
+      }
+      
+      .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+      }
+      
+      .hero-content {
+        max-width: 800px;
+      }
+      
+      .hero-content h1 {
+        color: white;
+        font-size: 3.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+      }
+      
+      .hero-content h2 {
+        color: var(--secondary);
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      
+      .hero-content h2:after {
+        background: white;
+      }
+      
+      .section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .section-dark {
+        background-color: var(--primary);
+        color: white;
+      }
+      
+      .section-dark h2 {
+        color: white;
+      }
+      
+      .section-dark h2:after {
+        background: var(--secondary);
+      }
+      
+      .section-accent {
+        background-color: var(--secondary);
+        color: var(--primary);
+      }
+      
+      .section-accent h2 {
+        color: var(--primary);
+      }
+      
+      .section-accent h2:after {
+        background: var(--primary);
+      }
+      
+      .countdown-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+      
+      .countdown-box {
+        background: white;
+        color: var(--primary);
+        padding: 1.5rem;
+        border-radius: 8px;
+        min-width: 100px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .countdown-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .countdown-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      
+      .wealth-stack {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 3rem 0;
+      }
+      
+      .wealth-item {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-top: 4px solid var(--secondary);
+      }
+      
+      .wealth-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      .wealth-item h3 {
+        color: var(--primary);
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      
+      .wealth-item i {
+        font-size: 2rem;
+        color: var(--secondary);
+        margin-bottom: 1rem;
+        display: block;
+      }
+      
+      .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      
+      .testimonial {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        max-width: 350px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+      
+      .testimonial:before {
+        content: '"';
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+        color: rgba(212, 175, 55, 0.1);
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+      
+      .testimonial-content {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .testimonial img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--secondary);
+        margin-bottom: 1rem;
+      }
+      
+      .testimonial-name {
+        font-weight: 700;
+        margin: 0.5rem 0 0;
+        color: var(--primary);
+      }
+      
+      .testimonial-title {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      
+      .calendar-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+      
+      .calendar-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 24px;
+        background-color: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        font-weight: 700;
+      }
+      
+      .calendar-btn:hover {
+        background-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .calendar-btn i {
+        margin-right: 10px;
+      }
+      
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      
+      .form-input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        transition: border 0.3s ease;
+      }
+      
+      .form-input:focus {
+        outline: none;
+        border-color: var(--secondary);
+      }
+      
+      .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: var(--secondary);
+        color: var(--primary);
+        border: none;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      
+      .submit-btn:hover {
+        background-color: var(--accent);
+        color: white;
+      }
+      
+      .compliance {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        text-align: center;
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+      
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+      }
+      
+      .footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+      
+      .footer-logo {
+        width: 150px;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-contact {
+        margin: 1.5rem 0;
+      }
+      
+      .footer-contact p {
+        margin: 0.5rem 0;
+      }
+      
+      .footer-social {
+        margin: 1.5rem 0;
+      }
+      
+      .footer-social a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      
+      .footer-social a:hover {
+        color: var(--secondary);
+      }
+      
+      .copyright {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-top: 1.5rem;
+      }
+      
+      .exit-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 8px;
+        padding: 3rem;
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none;
+        text-align: center;
+        border-top: 5px solid var(--secondary);
+      }
+      
+      .exit-popup h2 {
+        color: var(--primary);
+        margin-top: 0;
+      }
+      
+      .exit-popup p {
+        margin-bottom: 2rem;
+      }
+      
+      .popup-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      
+      .popup-btn {
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .popup-btn-primary {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border: none;
+      }
+      
+      .popup-btn-primary:hover {
+        background-color: var(--accent);
+        color: white;
+      }
+      
+      .popup-btn-secondary {
+        background-color: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+      
+      .popup-btn-secondary:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        display: none;
+      }
+      
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        
+        .hero-content h2 {
+          font-size: 1.3rem;
+        }
+        
+        .section {
+          padding: 3rem 1.5rem;
+        }
+        
+        .wealth-stack {
+          grid-template-columns: 1fr;
+        }
+        
+        .countdown-box {
+          min-width: 80px;
+          padding: 1rem;
+        }
+        
+        .countdown-value {
+          font-size: 2rem;
+        }
+        
+        .form-container {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <video autoplay muted loop class="hero-video">
+        <source src="hero-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 id="dynamic-headline">Exclusive Wealth Symposium for Singapore's Elite</h1>
+          <h2>30 July 2025 · 6:30 PM · The Fullerton Bay Hotel</h2>
+          <div class="countdown-container">
+            <div class="countdown-box">
+              <div class="countdown-value" id="days">00</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="hours">00</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="minutes">00</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="seconds">00</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+      <div class="section-content">
+        <h2>An Invitation-Only Evening of Strategic Wealth Creation</h2>
+        <p>Join Singapore's most discerning professionals for an exclusive symposium where we'll reveal the sophisticated wealth strategies typically reserved for private banking clients and family offices. This is not a seminar—it's a carefully curated experience for those who understand that true wealth is built through strategic connections and proprietary knowledge.</p>
+        <p>With only 50 seats available, this event represents a rare opportunity to gain insights that can transform your financial trajectory while connecting with Singapore's most influential wealth builders.</p>
+      </div>
+    </section>
+
+    <!-- Wealth Stacking Section -->
+    <section class="section section-dark">
+      <h2>The 7-Pillar Wealth Architecture</h2>
+      <p class="section-subtitle">Beyond basic investment advice—this is the complete framework used by Singapore's ultra-high-net-worth individuals</p>
+      
+      <div class="wealth-stack">
+        <div class="wealth-item">
+          <i class="fas fa-briefcase"></i>
+          <h3>Active Income Optimization</h3>
+          <p>Transform your professional earnings into wealth-building capital through strategic positioning and compensation structuring.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-couch"></i>
+          <h3>Passive Income Engineering</h3>
+          <p>Develop income streams that work while you sleep—structured properly for maximum efficiency and scalability.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-chart-line"></i>
+          <h3>Appreciation Assets</h3>
+          <p>Access the asset classes delivering exceptional returns in Asia's current economic climate—with proper risk mitigation.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Strategic Leverage</h3>
+          <p>How to use other people's money responsibly to accelerate wealth without unacceptable risk exposure.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>Tax Optimization</h3>
+          <p>Legal structures and strategies to preserve wealth that are compliant with Singapore's evolving regulatory environment.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-building"></i>
+          <h3>Business Ownership</h3>
+          <p>Transition from operator to owner—how to structure your business for wealth extraction without daily involvement.</p>
+        </div>
+        <div class="wealth-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Legacy & Protection</h3>
+          <p>Ensure your wealth survives generational transfer and is protected from unforeseen circumstances.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <h2>What Our Members Say</h2>
+      <p class="section-subtitle">Hear from Singapore professionals who have transformed their financial trajectories</p>
+      
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="testimonial1.jpg" alt="David Chua">
+            <p>"After implementing just one strategy from this event, I restructured my business to generate an additional S$120,000 annually in passive income."</p>
+            <p class="testimonial-name">David Chua</p>
+            <p class="testimonial-title">Managing Director, Financial Services</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="testimonial2.jpg" alt="Priya Sharma">
+            <p>"The connections I made at this event led to a joint venture that now accounts for 40% of my firm's revenue. The ROI has been extraordinary."</p>
+            <p class="testimonial-name">Priya Sharma</p>
+            <p class="testimonial-title">Founder, Tech Startup</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <img src="testimonial3.jpg" alt="James Wong">
+            <p>"I attended expecting investment tips but left with an entirely new framework for wealth building. This has changed how I approach my entire portfolio."</p>
+            <p class="testimonial-name">James Wong</p>
+            <p class="testimonial-title">Senior Partner, Law Firm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="section section-accent">
+      <h2>Event Details</h2>
+      <div class="event-details">
+        <p><strong><i class="fas fa-calendar-alt"></i> Date:</strong> 30 July 2025</p>
+        <p><strong><i class="fas fa-clock"></i> Time:</strong> 6:30 PM - 9:30 PM (VIP Dinner 9:30-11:00 PM for select attendees)</p>
+        <p><strong><i class="fas fa-map-marker-alt"></i> Venue:</strong> The Fullerton Bay Hotel, Clifford Pier Room</p>
+        <p><strong><i class="fas fa-user-tie"></i> Dress Code:</strong> Business Formal</p>
+      </div>
+      
+      <div class="calendar-buttons">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Exclusive+Wealth+Symposium&dates=20250730T103000Z/20250730T133000Z&details=Join+us+for+an+exclusive+evening+of+wealth+strategy+and+high-level+networking+at+The+Fullerton+Bay+Hotel&location=The+Fullerton+Bay+Hotel" target="_blank" class="calendar-btn">
+          <i class="fab fa-google"></i> Google Calendar
+        </a>
+        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Exclusive Wealth Symposium%0ADTSTART;TZID=Asia/Singapore:20250730T183000%0ADTEND;TZID=Asia/Singapore:20250730T213000%0ADESCRIPTION:Join us for an exclusive evening of wealth strategy and high-level networking at The Fullerton Bay Hotel%0ALOCATION:The Fullerton Bay Hotel%0AEND:VEVENT%0AEND:VCALENDAR" download="wealth-symposium.ics" class="calendar-btn">
+          <i class="fas fa-calendar-alt"></i> Outlook Calendar
+        </a>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section">
+      <h2>Request Your Invitation</h2>
+      <p class="section-subtitle">Complete this form to apply for one of the remaining seats</p>
+      
+      <div class="form-container">
+        <form action="https://formspree.io/f/xanjkkpo" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="Your professional email">
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Mobile Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required placeholder="+65 XXXX XXXX">
+          </div>
+          <div class="form-group">
+            <label for="company" class="form-label">Company/Position (Optional)</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Your current role">
+          </div>
+          <div class="form-group">
+            <label for="goals" class="form-label">Primary Wealth Goal</label>
+            <select id="goals" name="goals" class="form-input">
+              <option value="">Select your focus...</option>
+              <option value="preservation">Wealth Preservation</option>
+              <option value="growth">Aggressive Growth</option>
+              <option value="passive">Passive Income</option>
+              <option value="legacy">Legacy Planning</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">APPLY FOR INVITATION</button>
+        </form>
+      </div>
+      
+      <p class="compliance">
+        <small>This is an exclusive invitation-only event. Submission of this form does not guarantee attendance. 
+        All applications will be reviewed, and successful applicants will receive a formal invitation with payment details. 
+        By submitting this form, you agree to our privacy policy and consent to be contacted regarding this event.</small>
+      </p>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="section section-dark">
+      <div class="compliance">
+        <p><small>This event is strictly educational in nature. All strategies discussed are for informational purposes only and should not be considered as financial advice. Attendees are encouraged to consult with their own financial advisors before implementing any strategies. This event is not affiliated with or endorsed by any regulatory authority.</small></p>
+        <p><small>By attending this event, you consent to photography and videography that may be used for promotional purposes. The organizers reserve the right to refuse admission to anyone without explanation.</small></p>
+      </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6580732938?text=I'm%20interested%20in%20the%20Wealth%20Symposium%20on%20July%2030" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="company_logo.png" alt="Wealth Symposium" class="footer-logo">
+      
+      <div class="footer-contact">
+        <p><i class="fas fa-map-marker-alt"></i> Labrador Tower Level 6, 1 Pasir Panjang Road Queenstown 118911</p>
+        <p><i class="fas fa-phone"></i> +65 8073 2938 (VIP Concierge Line)</p>
+        <p><i class="fas fa-envelope"></i> connect@vizalliance.com.sg</p>
+      </div>
+      
+      
+      <p class="copyright">© 2025 Viz Alliance. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Exit Intent Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div class="exit-popup" id="exit-popup">
+      <h2>Your Seat Is Reserved—Don't Miss This Opportunity</h2>
+      <p>We've noticed you're about to leave. As spaces are extremely limited for this exclusive event, we'd hate for you to miss out on this transformative opportunity.</p>
+      <p>Complete your application now to secure your place among Singapore's most forward-thinking wealth builders.</p>
+      <div class="popup-buttons">
+        <button class="popup-btn popup-btn-primary" onclick="document.getElementById('exit-popup').style.display='none';document.getElementById('overlay').style.display='none';">Continue My Application</button>
+        <button class="popup-btn popup-btn-secondary" onclick="document.getElementById('exit-popup').style.display='none';document.getElementById('overlay').style.display='none';">Not Interested</button>
+      </div>
+    </div>
+
+    <!-- Dynamic NLP Headline Script -->
+    <script>
+      const headlines = [
+        "Where Singapore's Elite Meet to Build Lasting Wealth",
+        "The Private Wealth Strategies They Don't Teach at Business School",
+        "Your Next Wealth Breakthrough Starts Here",
+        "Exclusive Access to Singapore's Most Powerful Wealth Strategies",
+        "The Invitation-Only Event for Serious Wealth Builders"
+      ];
+      
+      const dynamicHeadline = document.getElementById('dynamic-headline');
+      
+      // Change headline every 5 seconds
+      let currentHeadline = 0;
+      setInterval(() => {
+        currentHeadline = (currentHeadline + 1) % headlines.length;
+        dynamicHeadline.textContent = headlines[currentHeadline];
+      }, 5000);
+      
+      // Time-based greeting
+      const hours = new Date().getHours();
+      if (hours < 12) {
+        dynamicHeadline.textContent = "Good Morning, Future Wealth Architect";
+      } else if (hours < 18) {
+        dynamicHeadline.textContent = "This Afternoon Could Change Your Financial Future";
+      } else {
+        dynamicHeadline.textContent = "Tonight Could Be Your Wealth Turning Point";
+      }
+    </script>
+
+    <!-- Countdown Script -->
+    <script>
+      const eventDate = new Date("July 30, 2025 18:30:00").getTime();
+      
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+      }
+      
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- Exit Intent Script -->
+    <script>
+      let popupShown = false;
+      let timeOnPage = 0;
+      
+      // Track time on page
+      setInterval(() => {
+        timeOnPage += 1;
+      }, 1000);
+      
+      // Exit intent detection
+      document.addEventListener('mouseout', (e) => {
+        if (e.clientY < 50 && !popupShown && timeOnPage > 10) {
+          document.getElementById('exit-popup').style.display = 'block';
+          document.getElementById('overlay').style.display = 'block';
+          popupShown = true;
+        }
+      });
+      
+      // Scroll-based trigger (if they scroll up to leave)
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', () => {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st < lastScrollTop && st < 300 && !popupShown && timeOnPage > 20) {
+          document.getElementById('exit-popup').style.display = 'block';
+          document.getElementById('overlay').style.display = 'block';
+          popupShown = true;
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      }, false);
+    </script>
+  </body>
+</html>
